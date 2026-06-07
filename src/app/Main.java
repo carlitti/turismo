@@ -1,13 +1,36 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+package app;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+import model.*;
+
+/**
+ * Clase principal para ejecutar el sistema.
+ */
+public class Main {
+
+    public static void main(String[] args) {
+
+        // Crear direcciones (separado para mejor legibilidad)
+        Direccion dir1 = new Direccion("Los Lagos 123", "Llanquihue", "Los Lagos");
+        Direccion dir2 = new Direccion("Av. del Mar 456", "Puerto Varas", "Los Lagos");
+        Direccion dir3 = new Direccion("Ruta 5 Sur Km 10", "Frutillar", "Los Lagos");
+
+        // Crear personas
+        Persona persona1 = new Persona("Carlos Gonzalez", 25, dir1);
+        Persona persona2 = new Persona("Maria Perez", 30, dir2);
+
+        // Crear empleado
+        Empleado empleado1 = new Empleado("Juan Lopez", 35, dir3, "Guía Turístico", 800000);
+
+        // Mostrar datos
+        System.out.println("=== PERSONAS ===");
+        System.out.println(persona1);
+        System.out.println(persona2);
+
+        System.out.println("\n=== EMPLEADO ===");
+        System.out.println(empleado1);
+
+        // Demostración de composición
+        System.out.println("\nDirección del empleado:");
+        System.out.println(empleado1.getDireccion());
     }
 }
