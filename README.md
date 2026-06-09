@@ -1,4 +1,4 @@
-v https://www.duoc.cl/wp-content/uploads/2022/09/logo-0.png
+https://www.duoc.cl/wp-content/uploads/2022/09/logo-0.png
 
 # 🧠 Evaluación – Desarrollo Orientado a Objetos I
 
