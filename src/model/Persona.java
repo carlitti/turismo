@@ -7,14 +7,14 @@ public class Persona {
 
     private String nombre;
     private int edad;
-    private Direccion direccion; // composición
+    private Direccion direccion;
 
     /**
      * Constructor de Persona.
      *
      * @param nombre nombre de la persona
      * @param edad edad
-     * @param direccion objeto Direccion
+     * @param direccion dirección (composición)
      */
     public Persona(String nombre, int edad, Direccion direccion) {
         this.nombre = nombre;
@@ -22,51 +22,30 @@ public class Persona {
         this.direccion = direccion;
     }
 
-    /**
-     * @return nombre
-     */
     public String getNombre() {
         return nombre;
     }
 
-    /**
-     * @param nombre nuevo nombre
-     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    /**
-     * @return edad
-     */
     public int getEdad() {
         return edad;
     }
 
-    /**
-     * @param edad nueva edad
-     */
     public void setEdad(int edad) {
         this.edad = edad;
     }
 
-    /**
-     * @return dirección
-     */
     public Direccion getDireccion() {
         return direccion;
     }
 
-    /**
-     * @param direccion nueva dirección
-     */
     public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
     }
 
-    /**
-     * Representación de la persona en texto
-     */
     @Override
     public String toString() {
         return "Nombre: " + nombre +
